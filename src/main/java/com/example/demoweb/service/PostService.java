@@ -12,12 +12,12 @@ public class PostService {
 
     List<Post> posts = new ArrayList<>();
 
-    public Iterable<Post> listAllPosts() {
+    public List<Post> listAllPosts() {
         return posts;
     }
 
     public void create(String text) {
-        posts.add(new Post(text, new Date()));
+        posts.add(new Post((long) posts.size(), text, new Date()));
     }
 
 }
