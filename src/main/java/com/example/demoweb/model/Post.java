@@ -13,6 +13,11 @@ public class Post {
         this.creationDate = new Date();
     }
 
+    public Post(String text, Date date) {
+        this.text = text;
+        this.creationDate = date;
+    }
+
     public String getText() {
         return text;
     }
