@@ -1,15 +1,16 @@
 package com.example.demoweb.controller;
 
 import org.springframework.stereotype.*;
+import org.springframework.ui.*;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class PostsViewController {
 
-    @ResponseBody
     @RequestMapping(path = "/", method = RequestMethod.GET)
-    public String list() {
-        return "Здесь будет главная страница";
+    public String list(Model model) {
+        model.addAttribute("appName", "Моё супер приложение");
+        return "list";
     }
 
     @ResponseBody
